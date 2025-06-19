@@ -18,6 +18,7 @@ public class DATA {
 
     public  static void createTestTable(){
         colors[0][0] = 1;
+        colors[0][3] = 88;
         colors[0][7] = 2;
         colors[7][7] = 3;
         colors[7][0] = 4;

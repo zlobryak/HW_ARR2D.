@@ -1,12 +1,13 @@
 class Rotation {
     static int[][] rotatedColors = new int[DATA.SIZE][DATA.SIZE];
     static int shift = DATA.SIZE - 1;
+//    TODO Переписать логику всез вращений
 //Поворачивает таблицу га 90
     public static void rotateTable90() {
 
         for (int i = 0; i < DATA.SIZE; i++) {
             for (int j = shift; j > -1; j--) {
-                rotatedColors[0][shift - j] = DATA.colors[i][j];
+                rotatedColors[shift - j][shift - i] = DATA.colors[i][shift - j];
             }
         }
         printRotatedTable();
