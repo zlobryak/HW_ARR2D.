@@ -15,8 +15,8 @@ class Rotation {
 //Поворачивает тблицу на 180
     public static void rotateTable180(){
         for (int i = 0; i < DATA.SIZE; i++) {
-            for (int j = 0; j < DATA.SIZE; j++) {
-                rotatedColors[j][i] = DATA.colors[i][DATA.SIZE - 1 - j];
+            for (int j = shift; j > - 1; j--) {
+                rotatedColors[shift - i][j] = DATA.colors[i][shift - j];
             }
         }
         printRotatedTable();
