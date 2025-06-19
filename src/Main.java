@@ -1,8 +1,8 @@
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        DATA.createTestTable();
+//        DATA.createTestTable();
+        DATA.createTable();
 
         switch (DATA.userInput()) {
             case "90":
