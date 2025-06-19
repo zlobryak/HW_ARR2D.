@@ -1,22 +1,22 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class DATA {
-    public static final int SIZE =8;
-    static int[][] colors = new int[SIZE][SIZE];
-//Заполняет таблицу случайными значениями
-    public static void createTable(){
+public class Data {
+
+    public static final int SIZE = 8;
+    int[][] colors = new int[SIZE][SIZE];
+
+    //Заполняет таблицу случайными значениями
+    public void createTable(){
         Random random = new Random();
         for (int i = 0; i < SIZE; i++) {
-            for (int j = 0; j < SIZE; j++) {
-                // для случайных значений воспользуемся готовым решением из библиотеки java.util.Random
-                colors[i][j] = random.nextInt(256);
-            }
+            // для случайных значений воспользуемся готовым решением из библиотеки java.util.Random
+            for (int j = 0; j < SIZE; j++) colors[i][j] = random.nextInt(256);
         }
         printTable();
     }
 
-    public  static void createTestTable(){
+    public void createTestTable(){
         colors[0][0] = 1;
         colors[0][3] = 88;
         colors[0][7] = 2;
@@ -26,7 +26,7 @@ public class DATA {
     }
 
 
-  public static void printTable(){
+  public void printTable(){
               for (int i = 0; i < SIZE; i++) {
           for (int j = 0; j < SIZE; j++) {
               // %4d означает, что мы под каждый номер резервируем 4 знака
@@ -39,7 +39,7 @@ public class DATA {
       }
       System.out.println();
   }
-  public static String userInput(){
+  public String userInput(){
       System.out.println("Выберите угол поворота - 90,180 или 270:");
       Scanner scanner = new Scanner(System.in);
 
