@@ -1,9 +1,7 @@
 
 public class Main {
     public static void main(String[] args) {
-//        DATA.createTestTable();
         Data table = new Data();
-        table.createTable();
 
         switch (table.userInput()) {
             case "90":
